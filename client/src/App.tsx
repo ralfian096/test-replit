@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ColorThemeSelector } from "@/components/ColorThemeSelector";
 import Dashboard from "@/pages/Dashboard";
 import Transactions from "@/pages/Transactions";
 import Reports from "@/pages/Reports";
@@ -40,7 +41,10 @@ export default function App() {
                   <SidebarTrigger data-testid="button-sidebar-toggle" />
                   <h2 className="text-lg font-semibold">Laporan Keuangan</h2>
                 </div>
-                <ThemeToggle />
+                <div className="flex items-center gap-2">
+                  <ColorThemeSelector />
+                  <ThemeToggle />
+                </div>
               </header>
               <main className="flex-1 overflow-auto p-6">
                 <div className="max-w-7xl mx-auto">
